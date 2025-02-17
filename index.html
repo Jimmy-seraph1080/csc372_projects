@@ -4,34 +4,54 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ABDULLAH LOGISTIC</title>
         <link rel = "stylesheet" href = "CSS/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     </head>
 
-    <body>
-        <div class = "header">
+    <body class = "bg-black text-white">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom-green w-100">
+            <div class="container-fluid">
 
-            <div id="hamburger_icon" class="hamburger">&#9776;</div> 
-            
-            <nav id="nav_bar" class="nav_menu">
-                <ul class ="menu">
-                    <li><a href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">Home</a></li>
-                    <li><a href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">PC Build</a></li>
-                    <li><a href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">About</a></li>
-                    <li><a href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">Contact Us</a></li>
-                    <li><a href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">Service</a></li>
-                </ul>
-            </nav>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-evenly" id="navbarNav">
+                    <ul class="navbar-nav menu">
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold px-4" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold px-4" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">PC BUILD</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold px-4" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold px-4" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">CONTACT US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold px-4" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">SERVICE</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+
+        <div class="header"></div>
+        <div class = "container logo_container mt-4">
+            <img src = "Images/logo3.png" alt="Abdullah logistic logo" class = "img-fluid" >
         </div>
 
-        <div class = "logo_container">
-            <img src = "Images/logo3.png" alt="Abdullah logistic logo" >
-        </div>
-
-        <h1>ABDULLAH lOGISTIC</h1>
+        <h1 class = "container title fw-bold text-center mt-3" >welcome to ABDULLAH lOGISTIC</h1>
 
         
         
-        <div class ="content">
-            <p class = "phrase">Your trusted partner in PC building and parts</p> 
+        <div class ="content content-container text-center p-4 mt-4">
+            <p class = "phrase ">Your trusted partner in PC building and parts</p> 
             <p>
                 <strong>Abdullah Logistic</strong> is your go to destination for building custom PCs, purchasing high quality PC parts, 
                 and learning how to assemble your very own computer from scratch. Our mission is to provide professional guidances, premium components, and
@@ -39,10 +59,39 @@
                 tech enthusiast, or someone looking to upgrade their computer, we make the process simple, affordable, and accessible.
             </p>
             <img src = "Images/pc1.png" alt = "PC part">
+            
+            <div id="imageSlider" class="carousel slide mt-4" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="2"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="Images/pc2.png" class="d-block w-100 slider_img" alt="PC Build 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Images/pc3.png" class="d-block w-100 slider_img" alt="PC Build 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Images/pc4.png" class="d-block w-100 slider_img" alt="PC Build 3">
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#imageSlider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#imageSlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
             <h2><strong>Contact Us</strong></h2>
             <p>Author: <strong>Jimmy Zhang </strong>and<strong> Abdullah Aye</strong> </p>
             <p>If you have any questions, feel free to <a href="mailto:jimmy_zhang@uri.edu">email us</a> at <strong>jimmy_zhang@uri.edu</strong>.</p>
         </div>
         <script src = "JavaScript/navbar.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     </body>
 </html>

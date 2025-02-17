@@ -15,10 +15,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 1px;
     background-color: #111;
-    box-shadow: 0 2px 10px rgba(0, 255, 0, 0.3);
+    box-shadow: 0 2px 10px rgba(0, 255, 0, 1.0);
 }
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;  /* Centers the items */
+    width: 100%;
+}
+
+.navbar-nav .nav-item {
+    margin: auto;
+}
+
 
 .hamburger {
     font-size: 25px; 
@@ -26,33 +37,11 @@ body {
     display: none; 
 }
 
-.nav_menu {
-    background-color: #111;
-    width: 100%;
-}
-
-.nav_menu ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-}
-
-.nav_menu ul li {
-    display: inline;
-}
-
-.nav_menu.active {
-    max-height: 260px; 
-}
-
 .menu {
     width: 100%;
     text-align: center;
 }
 
-.menu li {
-    padding: 15px 0;
-}
 
 .menu a {
     position: relative;
@@ -104,18 +93,16 @@ body {
 
 .logo_container img {
     float: left;
-    width: 100%;
-    height: auto;
     transition: transform 0.3s ease-in-out;
 }
 
 .logo_container img:hover {
-    transform: scale(1.1); 
+    transform: scale(1.08); 
 }
 
 
-h1 {
-    font-size: 32px;
+.title {
+    font-size: 50px;
     text-transform: uppercase;
     color: #00ff00;
     margin: 20px 0;
@@ -149,6 +136,25 @@ p {
     background: #111;
     box-shadow: 0 2px 10px rgba(0,255,0,0.3)
 }
+
+
+.carousel {
+    max-width: 600px; 
+    margin: auto; 
+}
+
+.slider-img {
+    max-height: 150px; 
+    max-width: 100%; 
+    object-fit: contain; 
+    margin: auto; 
+    box-shadow: 0px 0px 10px #00ff00; 
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 10%; 
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .hamburger {
