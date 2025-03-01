@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<real-estate>
+    <agencies>
+        <name>Best properties in New York</name>
+        <description>Agency Email: info@best-nyc.com </description>
+        <phone>Agency Phone: 555-5555</phone>
+    </agencies>
+    
+    <owners>
+        <name>NYC Real estate</name>
+    </owners>
+    <properties>
+         <property>
+            <name>Luxury Skyscraper</name>
+            <description>A total of 26 floors with 2 luxury apartments on the roof.</description>
+            <floors>26</floors>
+        </property>
+        <property>
+            <name>Residential Townhouse</name>
+            <description>A residential townhome with two floors.</description>
+            <floors>2</floors>
+        </property>
+    </properties>
+</real-estate>

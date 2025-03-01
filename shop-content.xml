@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pcbuild>
+    <component>
+        <name>Motherboard</name>
+        <description>The backbone of your PC that connects all components.</description>
+    </component>
+    <component>
+        <name>RAM</name>
+        <description>Random Access Memory (RAM) is crucial for multitasking.</description>
+    </component>
+    <component>
+        <name>Power Supply</name>
+        <description>Provides power to all components; ensure enough wattage.</description>
+    </component>
+</pcbuild>
