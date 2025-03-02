@@ -18,3 +18,17 @@ function loadShopContent() {
     // Send the request to fetch the file
     xhr.send(null);
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the image elements using their IDs
+    const donQuixoteImg = document.getElementById("card-img-top");
+
+
+    if (donQuixoteImg) {
+        donQuixoteImg.addEventListener("click", function() {
+            setAllImagesOpacity();
+            this.style.opacity = "1";
+            loadHTML("data/shop-content.html");
+        });
+    }
+});
