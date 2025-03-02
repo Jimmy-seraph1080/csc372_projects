@@ -1,5 +1,5 @@
 // Function to set the opacity of all image elements to 0.5
-function setAllImagesOpacity() {
+function setAllImages() {
     // Restricting selection to images inside the #book container
     const images = document.querySelectorAll("#product img");
     images.forEach(function(img) {
@@ -25,14 +25,20 @@ function loadHTML(filePath) {
 
 document.addEventListener("DOMContentLoaded", function() {
     // Get the image elements using their IDs
-    const donQuixoteImg = document.getElementById("4090");
+    const gpu4090 = document.getElementById("4090");
+    const i9 = document.getElementById("i9");
 
+    if (gpu4090) {
+        gpu4090.addEventListener("click", function() {
+            setAllImages();
+            loadHTML("data/shop-content.html");
+        });
+    }
 
-    if (donQuixoteImg) {
-        donQuixoteImg.addEventListener("click", function() {
-            setAllImagesOpacity();
-            this.style.opacity = "1";
-            loadHTML("shop-content.html");
+    if (i9) {
+        gpu4090.addEventListener("click", function() {
+            setAllImages();
+            loadHTML("data/shop-content.xml");
         });
     }
 });
