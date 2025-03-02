@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product id="4090">
+        <name>NVIDIA RTX 4090</name>
+        <price>$1599.99</price>
+        <specs>24GB GDDR6X, 384-bit Memory Interface</specs>
+    </product>
+    <product id="i9">
+        <name>Intel Core i9 13900K</name>
+        <price>$589.99</price>
+        <specs>24 Cores, 5.8 GHz Turbo</specs>
+    </product>
+    <product id="ram">
+        <name>Corsair 32GB DDR5</name>
+        <price>$199.99</price>
+        <specs>DDR5 5200MHz, CL40 Latency</specs>
+    </product>
+</products>
+</products>
