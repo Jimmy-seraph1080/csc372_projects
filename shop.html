@@ -3,140 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PC Parts Shop</title>
+    <title>PC Parts Store</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-black text-white">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom-green w-100">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <!-- Header Section -->
+    <header class="bg-dark text-center py-3">
+        <h1 class="text-success">THE PC PARTS STORE</h1>
+        <nav>
+            <a href="index.html" class="text-white fw-bold text-decoration-none">HOME</a>
+        </nav>
+    </header>
 
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav menu">
-                    <li class="nav-item">
-                        <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/guide.html">PC BUILD</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">ABOUT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">CONTACT US</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">SERVICE</a>
-                    </li>
-                </ul>
+    <!-- Main Content Section -->
+    <section id="content" class="container text-center mt-4">
+        <h2 class="text-success">Welcome to The PC Parts Store</h2>
+        <h4 class="text-warning">Building a PC is an <span class="fw-bold">adventure</span>, and we're here to help!</h4>
+
+        <!-- Product Display -->
+        <div id="product" class="row mt-4">
+            <div class="col-md-4">
+                <img id="4090" src="images/4090.jpg" class="img-fluid product" alt="NVIDIA RTX 4090">
             </div>
-
-        </div>
-    </nav>
-    <div class="header_line"></div>
-    <div class = "container logo_container mt-4">
-        <img src = "Images/logo3.png" alt="Abdullah logistic logo" class = "img-fluid" >
-    </div>
-        <!-- Shop Header -->
-        <div class="container text-center mt-4">
-            <h1 class="text-success">PC Parts Shop</h1>
-            <p class="lead">Find high-quality components for building your custom PC.</p>
-        </div>
-
-        <!-- Product Listings -->
-        <div class="container mt-4">
-            <div class="row">
-
-                <!-- GPU -->
-                <div class="col-md-4">
-                    <div class="card bg-dark text-white border-success">
-                        <img src="Images/4090.jpg" class="card-img-top" alt="GPU">
-                        <div class="card-body">
-                            <h5 class="card-title">NVIDIA RTX 4090</h5>
-                            <p class="fw-bold text-success">$1,599</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CPU -->
-                <div class="col-md-4">
-                    <div class="card bg-dark text-white border-success">
-                        <img src="Images/cpu.png" class="card-img-top" alt="CPU">
-                        <div class="card-body">
-                            <h5 class="card-title">Intel Core i9 13900K</h5>
-                            <p class="fw-bold text-success">$589</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- RAM -->
-                <div class="col-md-4">
-                    <div class="card bg-dark text-white border-success">
-                        <img src="Images/ram.png" class="card-img-top" alt="RAM">
-                        <div class="card-body">
-                            <h5 class="card-title">Corsair 32GB DDR5</h5>
-                            <p class="fw-bold text-success">$149</p>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="col-md-4">
+                <img id="i9" src="images/cpu.jpg" class="img-fluid product" alt="Intel Core i9 13900K">
             </div>
-
-            <div class="row mt-4">
-
-                <!-- SSD -->
-                <div class="col-md-4">
-                    <div class="card bg-dark text-white border-success">
-                        <img src="Images/ssd.png" class="card-img-top" alt="SSD">
-                        <div class="card-body">
-                            <h5 class="card-title">Samsung 2TB NVMe SSD</h5>
-                            <p class="fw-bold text-success">$229</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Power Supply -->
-                <div class="col-md-4">
-                    <div class="card bg-dark text-white border-success">
-                        <img src="Images/psu.png" class="card-img-top" alt="PSU">
-                        <div class="card-body">
-                            <h5 class="card-title">Corsair 850W PSU</h5>
-                            <p class="fw-bold text-success">$129</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Motherboard -->
-                <div class="col-md-4">
-                    <div class="card bg-dark text-white border-success">
-                        <img src="Images/motherboard.png" class="card-img-top" alt="Motherboard">
-                        <div class="card-body">
-                            <h5 class="card-title">ASUS ROG Strix Z790</h5>
-                            <p class="fw-bold text-success">$349</p>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="col-md-4">
+                <img id="ram" src="images/ram.jpg" class="img-fluid product" alt="Corsair 32GB DDR5">
             </div>
         </div>
 
-        <div class="container text-center mt-4">
-            <button class="btn btn-success" onclick="loadShopContent()">Load Shop</button>
+        <!-- Product Details Section -->
+        <div class="row mt-4">
+            <div class="col">
+                <div id="details" class="border border-success p-3 bg-dark text-white">
+                    <p>Click on a product to learn more!</p>
+                </div>
+            </div>
         </div>
-        
-        <!-- Dynamic content will be inserted here -->
-        <div id="dynamic-content" class="container mt-4"></div>
 
-        <!-- Footer -->
-        <footer class="bg-dark text-white text-center py-3 mt-4">
-            <p>&copy; 2025 PC Parts Shop. All rights reserved.</p>
-        </footer>
-        <script src="js/load_content.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p>&copy; 2025 PC Parts Store. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/load_content.js"></script>
 </body>
 </html>
