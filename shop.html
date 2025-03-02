@@ -8,38 +8,72 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body class="bg-black text-white">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom-green w-100">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <!-- Header Section -->
-    <header class="bg-dark text-center py-3">
-        <h1 class="text-success">THE PC PARTS STORE</h1>
-        <nav>
-            <a href="index.html" class="text-white fw-bold text-decoration-none">HOME</a>
-        </nav>
-    </header>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav menu">
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/guide.html">PC BUILD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">CONTACT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">SERVICE</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <div class="header_line"></div>
+    <div class = "container logo_container mt-4">
+        <img src = "Images/logo3.png" alt="Abdullah logistic logo" class = "img-fluid" >
+    </div>
+
+    <!-- Introduction -->
+    <section id="intro" class="container mt-5 text-center">
+        <h1 class="title">Welcome to The PC Parts Store</h1>
+        <p class="phrase">Building a PC is an adventure, and we're here to help!</p>
+        <p class="phrase">Click on a product to learn more!</p>
+    </section>
 
     <!-- Main Content Section -->
-    <section id="content" class="container text-center mt-4">
-        <h2 class="text-success">Welcome to The PC Parts Store</h2>
-        <h4 class="text-warning">Building a PC is an <span class="fw-bold">adventure</span>, and we're here to help!</h4>
-
+    <section id="content" class="container text-center mt-4 ">
         <!-- Product Display -->
         <div id="product" class="row mt-4">
             <div class="col-md-4">
-                <img id="4090" src="Images/4090.jpg" class="img-fluid product" alt="NVIDIA RTX 4090">
+                <div class="bg-dark card bg-dark text-white border-success">
+                    <div class="card-body">
+                        <img id="4090" src="Images/4090.jpg" class="card-img-top img-fluid product" alt="NVIDIA RTX 4090">
+                        <h5 class="card-title">NVIDIA RTX 4090</h5>
+                    </div>
+                </div>
             </div>
             <div class="col-md-4">
-                <img id="i9" src="Images/i9.jpg" class="img-fluid product" alt="Intel Core i9 13900K" width="75" height="50">
+                <div class="bg-dark card bg-dark text-white border-success">
+                    <div class="card-body">
+                        <img id="i9" src="Images/i9.jpg" class="img-fluid product" alt="Intel Core i9 13900K" width="117" height="50">
+                        <h5 class="card-title">Intel Core i9 13900K</h5>
+                    </div>
+                </div>
             </div>
             <div class="col-md-4">
-                <img id="ram" src="Images/ram.jpg" class="img-fluid product" alt="Corsair 32GB DDR5" width="150" height="50">
-            </div>
-        </div>
-
-        <!-- Product Details Section -->
-        <div class="row mt-4">
-            <div class="col">
-                <div id="details" class="border border-success p-3 bg-dark text-white">
-                    <p>Click on a product to learn more!</p>
+                <div class="bg-dark card bg-dark text-white border-success">
+                    <div class="card-body">
+                        <img id="ram" src="Images/ram.jpg" class="img-fluid product" alt="Corsair 32GB DDR5" width="220" height="50">
+                        <h5 class="card-title">Corsair 32GB DDR5</h5>
+                    </div>
                 </div>
             </div>
         </div>
