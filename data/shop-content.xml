@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pcbuild>
-    <component>
-        <name>Motherboard</name>
-        <description>The backbone of your PC that connects all components.</description>
-    </component>
-    <component>
-        <name>RAM</name>
-        <description>Random Access Memory (RAM) is crucial for multitasking.</description>
-    </component>
-    <component>
-        <name>Power Supply</name>
-        <description>Provides power to all components; ensure enough wattage.</description>
-    </component>
-</pcbuild>
+<products>
+    <product>
+        <name>NVIDIA RTX 4090</name>
+        <category>Graphics Card</category>
+        <price>$1,599</price>
+        <description>Powerful GPU with AI-driven rendering and ray tracing.</description>
+        <image>Images/4090.jpg</image>
+    </product>
+    <product>
+        <name>Intel Core i9 13900K</name>
+        <category>Processor</category>
+        <price>$589</price>
+        <description>Extreme performance for any task with 24 cores.</description>
+        <image>Images/i9.jpg</image>
+    </product>
+    <product>
+        <name>Corsair 32GB DDR5</name>
+        <category>RAM</category>
+        <price>$149</price>
+        <description>High-speed memory for gaming and multitasking.</description>
+        <image>Images/ram.jpg</image>
+    </product>
+</products>
