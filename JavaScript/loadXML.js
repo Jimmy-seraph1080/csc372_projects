@@ -11,7 +11,7 @@ function loadXML() {
 
     // Prepare and send the request to fetch the XML file
     xhr.open("GET", "data/loadXML.xml", true);
-    xhr.send();
+    xhr.send(null);
 }
 
 // Function to parse XML data and display it in the existing "details" section
