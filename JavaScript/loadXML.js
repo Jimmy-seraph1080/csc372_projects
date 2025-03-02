@@ -1,64 +1,53 @@
-// Get the button element by its ID
-var myBtn = document.getElementById('ajaxBtn');
+// Function to load and parse XML data using Ajax
+function loadXML() {
+    let xhr = new XMLHttpRequest();
 
-// Add event listener to trigger the Ajax request when the button is clicked
-myBtn.addEventListener('click', makeRequest, false);
-
-// Function to extract text content from XML elements
-function getNodeValue(obj, tag) {
-    return obj.getElementsByTagName(tag)[0].firstChild.nodeValue;
-}
-
-// Function to handle the Ajax request
-function makeRequest() {
-    // Create a new XMLHttpRequest object
-    var xhr = new XMLHttpRequest();
-    
-    // Get the content container where data will be displayed
-    var container = document.getElementById('content');
-    container.innerHTML = ''; // Clear existing content
-
-    // When the response has loaded
-    xhr.onload = function () {
-        // Check if the server status is OK (200)
-        if (xhr.status === 200) {
-            // Parse the XML response
-            var response = xhr.responseXML;
-
-            // Get <content> elements from the XML file
-            var content = response.getElementsByTagName('content');
-
-            // Loop through the XML content elements
-            for (var i = 0; i < content.length; i++) {
-                // Declare variables for header and paragraphs
-                var header, paragraph;
-
-                // Create and add header element
-                header = document.createElement('h1');
-                header.appendChild(document.createTextNode(getNodeValue(content[i], 'header')));
-                container.appendChild(header);
-
-                // Create and add paragraph 1
-                paragraph = document.createElement('p');
-                paragraph.appendChild(document.createTextNode(getNodeValue(content[i], 'p1')));
-                container.appendChild(paragraph);
-
-                // Create and add paragraph 2
-                paragraph = document.createElement('p');
-                paragraph.appendChild(document.createTextNode(getNodeValue(content[i], 'p2')));
-                container.appendChild(paragraph);
-
-                // Create and add paragraph 3
-                paragraph = document.createElement('p');
-                paragraph.appendChild(document.createTextNode(getNodeValue(content[i], 'p3')));
-                container.appendChild(paragraph);
-            }
+    // Define function to handle state changes
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            displayProducts(xhr.responseXML);
         }
     };
 
-    // Prepare the request (GET request to fetch `data.xml`, asynchronous)
-    xhr.open('GET', 'data/loadXML.xml', true);
-    
-    // Send the request
-    xhr.send(null);
+    // Prepare and send the request to fetch the XML file
+    xhr.open("GET", "data/loadXML.xml", true);
+    xhr.send();
 }
+
+// Function to parse XML data and display it in the existing "details" section
+function displayProducts(xml) {
+    let products = xml.getElementsByTagName("product");
+    let output = "<div class='text-start'>";
+
+    // Loop through each product in the XML file
+    for (let i = 0; i < products.length; i++) {
+        let name = products[i].getElementsByTagName("name")[0].textContent;
+        let category = products[i].getElementsByTagName("category")[0].textContent;
+        let price = products[i].getElementsByTagName("price")[0].textContent;
+        let description = products[i].getElementsByTagName("description")[0].textContent;
+        let image = products[i].getElementsByTagName("image")[0].textContent;
+
+        // Update details section with the XML product details
+        output += `
+            <div class="border border-success p-3 mb-3 bg-dark text-white">
+                <h5>${name}</h5>
+                <p><strong>Category:</strong> ${category}</p>
+                <p>${description}</p>
+                <p class="fw-bold text-success">${price}</p>
+                <img src="${image}" class="img-fluid mt-2" width="200" alt="${name}">
+            </div>
+        `;
+    }
+
+    output += "</div>";
+
+    // Insert the generated content into the existing "details" section
+    document.getElementById("details").innerHTML = output;
+}
+
+// Event Listener to trigger XML loading when an image is clicked
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("i9").addEventListener("click", function() {
+        loadXML();
+    });
+});
