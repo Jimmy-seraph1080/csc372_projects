@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
         productDetails.innerHTML = "";
 
         if (query.includes("rtx 4090")) {
-            loadHTML("rtx-4090.html");
+            loadHTML("4090.html");
         } else if (query.includes("intel i9")) {
-            loadXML("intel-i9.xml");
+            loadXML("i9.xml");
         } else if (query.includes("corsair ram")) {
-            loadJSON("corsair-ram.json");
+            loadJSON("ram.json");
         } else if (query.includes("amd rx")) {
             loadJQuery("amd-rx.jq");
         } else {
