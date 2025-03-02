@@ -10,7 +10,7 @@ function loadXML() {
     };
 
     // Prepare and send the request to fetch the XML file
-    xhr.open("GET", "data/loadXML.xml", true);
+    xhr.open("GET", "data/shop-content.xml", true);
     xhr.send(null);
 }
 
