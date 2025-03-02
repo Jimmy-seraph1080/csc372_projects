@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
         donQuixoteImg.addEventListener("click", function() {
             setAllImagesOpacity();
             this.style.opacity = "1";
-            loadHTML("JavaScript/shop-content.html");
+            loadHTML("shop-content.html");
         });
     }
 });
