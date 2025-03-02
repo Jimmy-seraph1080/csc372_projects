@@ -1,25 +1,32 @@
-// Wait until the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", function () {
-    // Get the button that will trigger the AJAX request
-    var loadBtn = document.getElementById("recommendBtn");
+// Function to set the opacity of all images inside the #product container
+function setAllImages() {
+    const images = document.querySelectorAll("#product img");
+    images.forEach(img => img.style.opacity = "0.5");
+}
 
-    // Add an event listener to the button
-    loadBtn.addEventListener("click", function () {
-        // Create an XMLHttpRequest object
-        var xhr = new XMLHttpRequest();
+// Function to trigger an Ajax request to load HTML content
+function loadHTML(filePath) {
+    let xhr = new XMLHttpRequest();
+   
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            document.getElementById("details").innerHTML = xhr.responseText; // Load into "details"
+        }
+    };
 
-        // Define what happens when the request is completed
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                // Insert the loaded HTML into the content section
-                document.getElementById("content").innerHTML += xhr.responseText;
-            }
-        };
+    xhr.open("GET", filePath, true);
+    xhr.send(null);
+}
 
-        // Prepare the request
-        xhr.open("GET", "promotions.html", true);
+// Event Listener for loading HTML content when an image is clicked
+document.addEventListener("DOMContentLoaded", function() {
+    const gpu4090 = document.getElementById("4090");
 
-        // Send the request
-        xhr.send();
-    });
+    if (gpu4090) {
+        gpu4090.addEventListener("click", function() {
+            setAllImages();
+            this.style.opacity = "1"; // Highlight selected image
+            loadHTML("data/shop-content.html"); // Load GPU details
+        });
+    }
 });
