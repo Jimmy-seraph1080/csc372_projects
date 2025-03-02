@@ -45,9 +45,7 @@ function displayProducts(xml) {
 
 // Event Listener for XML content loading when clicking on images
 document.addEventListener("DOMContentLoaded", function() {
-    const gpu4090 = document.getElementById("4090");
     const i9 = document.getElementById("i9");
-    const ram = document.getElementById("ram");
 
     if (i9) {
         i9.addEventListener("click", function() {
