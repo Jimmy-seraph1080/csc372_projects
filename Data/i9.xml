@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product id="i9">
+        <name>Intel Core i9-13900K</name>
+        <price>$599</price>
+        <description>High-performance CPU with 24 cores for gaming and productivity.</description>
+    </product>
+</products>
