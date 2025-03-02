@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
         gpu4090.addEventListener("click", function() {
             setAllImages();
             this.style.opacity = "1"; // Highlight selected image
-            loadHTML("data/shop-content.html"); // Load GPU details
+            loadHTML("data/4090.html"); // Load GPU details
         });
     }
 });
