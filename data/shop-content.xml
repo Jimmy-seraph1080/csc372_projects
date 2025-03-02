@@ -7,18 +7,4 @@
         <description>Powerful GPU with AI-driven rendering and ray tracing.</description>
         <image>Images/4090.jpg</image>
     </product>
-    <product>
-        <name>Intel Core i9 13900K</name>
-        <category>Processor</category>
-        <price>$589</price>
-        <description>Extreme performance for any task with 24 cores.</description>
-        <image>Images/i9.jpg</image>
-    </product>
-    <product>
-        <name>Corsair 32GB DDR5</name>
-        <category>RAM</category>
-        <price>$149</price>
-        <description>High-speed memory for gaming and multitasking.</description>
-        <image>Images/ram.jpg</image>
-    </product>
 </products>
