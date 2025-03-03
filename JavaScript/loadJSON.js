@@ -36,7 +36,6 @@ function displayProduct(product) {
 // event listener for JSON content loading when clicking on ram image
 document.addEventListener("DOMContentLoaded", function() {
     const ram = document.getElementById("ram");
-
     if (ram) {
         ram.addEventListener("click", function() {
             setAllImages();
