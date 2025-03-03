@@ -12,9 +12,9 @@ $("#steps").prepend('<section id="dynamicSection" class="container content mt-4"
 //using $(document).ready(function() ensures the jquery code run only after the whole html are loaded by the browser
 $(document).ready(function() {
     $("#dynamicSection h2").css({
-        "font-size": "50px",   // Increase font size
-        "font-weight": "bold", // Make it bold
-        "color": "red"         // Make it stand out in red
+        "font-size": "50px",   
+        "font-weight": "bold", 
+        "color": "red"         
     });
 });
 // Remove the dynamicSection by added remove section on button click

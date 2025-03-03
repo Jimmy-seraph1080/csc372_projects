@@ -140,6 +140,14 @@ h2 {
     width: 10%; 
 }
 
+.fixed-height {
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .title {
