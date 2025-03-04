@@ -1,46 +1,55 @@
-// Function to set image opacities
+// function to set image opacities
 function setAllImages() {
-    const images = document.querySelectorAll("#product img");
+    // select all image elements within the #product container
+    var images = document.querySelectorAll("#product img");
+    // loop through each image and set opacity to 0.5 
     images.forEach(img => img.style.opacity = "0.5");
+    // log confirmation to developer console
     console.log("All images dimmed");
 }
 
-// Function to safely extract XML data
+// function to safely extract XML data
 function getNodeValue(obj, tag) {
+    // get all XML elements with specified tag name from parent object
     const elements = obj.getElementsByTagName(tag);
+    // check if any elements were found
     if (elements.length > 0) {
+        // return text content of first matching element
         return elements[0].textContent;
     } else {
+        // log warning if tag not found message
         console.warn(`Tag "${tag}" not found in XML`);
-        return "N/A";
+        // return NA 
+        return "NA";
     }
 }
 
-// Function to load and display XML data
+// function to load and display XML data
 function loadXMLData() {
+    // create new XMLHttpRequest object
     const xhr = new XMLHttpRequest();
-    const container = document.getElementById("content");
-    container.innerHTML = ''; // Clear previous content
-
+    // container variable to store content
+    var container = document.getElementById("content");
+    // clear previous content
+    container.innerHTML = '';
+    // define callback for when request completes
     xhr.onload = function () {
+        // log HTTP status for debugging
         console.log("XHR Status:", xhr.status);
+        // check for successful response and valid XML
         if (xhr.status === 200 && xhr.responseXML) {
+            // log successful XML receipt
             console.log("XML Received:", xhr.responseXML);
+            // store XML document in xmlDOC
             const xmlDoc = xhr.responseXML;
-            const products = xmlDoc.documentElement; // Root <products> element
-            
-            // Extract all <CPU> elements
-            const cpuElements = products.getElementsByTagName("CPU");
-            console.log("Found CPUs:", cpuElements.length);
-
-            if (cpuElements.length === 0) {
-                container.innerHTML = `<p class="text-danger">No CPU data found in XML</p>`;
-                return;
-            }
-
-            // Process the first <CPU> element
-            const cpu = cpuElements[0];
-            const output = `
+            // Get products element from XML and store it in products
+            var products = xmlDoc.documentElement;
+            // extract all cpu elements
+            var cpuElements = products.getElementsByTagName("CPU");
+            // process the first <CPU> element
+            var cpu = cpuElements[0];
+            // create html detail and store it in output
+            var output = `
                 <div class="product-info bg-dark text-white p-4 rounded">
                     <h2>${getNodeValue(cpu, 'TITLE')}</h2>
                     <p><strong>${getNodeValue(cpu, 'PRICE')}</strong></p>
@@ -49,42 +58,51 @@ function loadXMLData() {
                     <button id="back-to-products" class="btn btn-success mt-3">Back to Products</button>
                 </div>
             `;
-
+            // insert detal into container
             container.innerHTML = output;
-
-            // Add back button functionality
+            // add back button functionality
             document.getElementById("back-to-products").addEventListener("click", () => {
                 location.reload();
             });
-
         } else {
+            // error handling
             console.error("Failed to load XML:", xhr.statusText);
+            // error message
             container.innerHTML = `<p class="text-danger">Error loading product details (${xhr.status})</p>`;
         }
     };
-
+    // handle network-level errors (e.g., no connection)
     xhr.onerror = function () {
-        console.error("Network error");
-        container.innerHTML = `<p class="text-danger">Network error. Check console.</p>`;
+        console.error("network error");
+        container.innerHTML = `<p class="text-danger">network error. check console.</p>`;
     };
-
+    // configure GET request for XML file
     xhr.open("GET", "Data/i9.xml", true);
+    // send request with null as parameter
     xhr.send(null);
 }
 
-// Event listener for image click
+// event listener for image click
 document.addEventListener("DOMContentLoaded", () => {
-    const i9Image = document.getElementById("i9");
-    console.log("DOM loaded. Image element:", i9Image);
-
+    // get id for i9 and store it in i9Image
+    var i9Image = document.getElementById("i9");
+    // if i9Image exist
     if (i9Image) {
+        // event handler for i9 product
         i9Image.addEventListener("click", function () {
-            console.log("Image clicked");
+            // dim all images
             setAllImages();
+            // full opacity
             this.style.opacity = "1";
+            // load and display product details
             loadXMLData();
         });
     } else {
-        console.error("Image with ID 'i9' not found in HTML");
+        // log detailed error if image not found
+        console.error("Processor image not found");
+         // list all available product images for debugging
+        document.querySelectorAll("#product img").forEach(img => {
+            console.log(`- ${img.id} (${img.src})`);
+        });
     }
 });
