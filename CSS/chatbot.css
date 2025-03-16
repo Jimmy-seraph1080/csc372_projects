@@ -1,63 +1,67 @@
-    /* Razer-Style Chatbot */
-    body { background-color: #000; font-family: Arial, sans-serif; }
+#chatbot-icon {
+    bottom: 20px;
+    right: 20px;
+    background: #000;
+    border: 2px solid #00FF00;
+    color: #00FF00;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+}
 
-    .hidden { display: none; }
+#chatbot-container {
+    bottom: 10px;
+    right: 10px;
+    width: 300px;
+    max-height: 500px;
+    background: #111;
+    border: 2px solid #00FF00;
+    box-shadow: 0px 0px 10px #00ff00;
+    display: none;
+    border-radius: 5px;
+}
 
-    /* Floating Chat Icon */
-    #chatbot-icon {
-        bottom: 20px; right: 20px;
-        background-color: #000;
-        color: #00ff00;
-        border: 2px solid #00ff00;
-        transition: 0.3s;
-    }
-    #chatbot-icon:hover { background-color: #00ff00; color: #000; }
+#chatbot-header {
+    background: #000;
+    color: #00ff00;
+    padding: 10px;
+    border-bottom: 2px solid #00ff00;
+}
 
-    /* Chatbot Window */
-    #chatbot-container {
-        bottom: 80px; right: 20px;
-        width: 350px; max-height: 500px;
-        background: #111;
-        border: 2px solid #00ff00;
-        box-shadow: 0px 0px 10px #00ff00;
-        overflow: hidden;
-    }
+#chatbot-messages {
+    height: 350px;
+    overflow-y: auto;
+    padding: 10px;
+    color: white;
+}
 
-    /* Header */
-    #chatbot-header {
-        background: #000;
-        color: #00ff00;
-        padding: 10px;
-        border-bottom: 2px solid #00ff00;
-    }
+#chatbot-input-container {
+    padding: 10px;
+    background: #111;
+    border-top: 2px solid #00ff00;
+}
 
-    /* Chat Messages */
-    #chatbot-body {
-        height: 350px;
-        overflow-y: auto;
-        padding: 10px;
-        background: #000;
-    }
-    .message {
-        background: #00ff00;
-        color: #000;
-        padding: 8px;
-        margin-bottom: 10px;
-        border-radius: 5px;
-    }
+.message {
+    background: #00ff00;
+    color: #000;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
 
-    /* Input Box */
-    #chatbot-input-container {
-        padding: 10px;
-        background: #111;
-        border-top: 2px solid #00ff00;
-    }
-    .btn-neon {
-        background: #00ff00;
-        color: #000;
-        border: 2px solid #00ff00;
-        transition: 0.3s;
-    }
-    .btn-neon:hover { background: #000; color: #00ff00; }
-    .text-neon { color: #00ff00; }
-    .border-neon { border: 2px solid #00ff00; }
+.btn-neon {
+    background: #00ff00;
+    color: #000;
+    border: 2px solid #00ff00;
+    transition: 0.3s;
+}
+.btn-neon:hover { 
+    background: #000; 
+    color: #00ff00; 
+}
+.text-neon { 
+    color: #00ff00; 
+}
+.border-neon {
+    border: 2px solid #00ff00; 
+}

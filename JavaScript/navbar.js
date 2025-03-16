@@ -2,7 +2,7 @@
 // const hamburger_icon = document.getElementById("hamburger_icon");
 // // using querySelectorAll for menu items
 // const menu_list_items = document.querySelectorAll("#nav_bar li"); 
-    $(".phrase").html("<p><u>Your trusted partner in PC building and parts</u></p>" );
+$(".phrase").html("<p><u>Your trusted partner in PC building and parts</u></p>" );
 // toggle the navigation menu on click
 // to do that we use an addEventListener
 // an addEventListener method is a function that allows one to attach a handler to an element on a webpage

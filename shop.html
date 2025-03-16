@@ -90,22 +90,22 @@
             </div>
         </section>
 
-        <!-- Floating Chat Button -->
-        <button id="chatbot-icon" class="btn btn-neon position-fixed p-4">
+        <!-- Chatbot Button -->
+        <button id="chatbot-icon" class="btn btn-dark text-white position-fixed">
             💬 Chat with us
         </button>
-
+    
         <!-- Chatbot Container -->
-        <div id="chatbot-container" class="position-fixed rounded hidden">
-            <div id="chatbot-header" class="text-neon d-flex justify-content-between align-items-center">
-                <span>AI Abdullah</span>
+        <div id="chatbot-container" class="position-fixed hidden">
+            <div id="chatbot-header" class="d-flex justify-content-between align-items-center">
+                <span>Abdullah.AI</span>
                 <button id="close-btn" class="btn-close btn-close-white"></button>
             </div>
             <div id="chatbot-body">
                 <div id="chatbot-messages"></div>
             </div>
             <div id="chatbot-input-container" class="d-flex">
-                <input type="text" id="chatbot-input" class="form-control bg-dark text-white border-neon" placeholder="Type a message..." />
+                <input type="text" id="chatbot-input" class="form-control" placeholder="Type a message..." />
                 <button id="send-btn" class="btn btn-neon">Send</button>
             </div>
         </div>
@@ -120,6 +120,6 @@
         <script src="JavaScript/loadXML.js"></script>
         <script src="JavaScript/loadJSON.js"></script>
         <script src="JavaScript/loadjQuery.js"></script>
-        <script src="JavaScript/test.js"></script>
+        <script src="JavaScript/api.js"></script> <!-- openai api js -->
     </body>
 </html>
