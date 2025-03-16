@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   // a function to handle message sending
   function send_message() {
-    // get and clean the input
+        // get and clean the input
     const user_message = chatbot_input.value.trim();
     // only proceed if message exists
     if (user_message) {
