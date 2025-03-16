@@ -1,5 +1,3 @@
-// change title text color and increase the front size to 60px
-$(".title").css({"color": "#00ff00", "font-size": "60px"});
 // add a green boarder to each step card
 $("#steps .card").each(function() {
     $(this).css("border", "2px solid #00ff00")
