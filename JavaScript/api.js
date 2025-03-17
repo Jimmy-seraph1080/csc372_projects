@@ -72,17 +72,22 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
       // api configuration where  it is ask to keep everything on the topic on pc
       const response = await fetch(API_URL, {
+        // the method - post
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          // authorization using the key
           Authorization: `Bearer ${API_KEY}`
         },
         body: JSON.stringify({
+          // model
           model: "gpt-4o-mini",
+          // the message and persona
           messages: [
             { role: "system", content: "You are a PC part compatibility assistant. Your job is to help users find the best and most compatible PC parts for their build. Only provide answers related to PC building, part recommendations, and compatibility. If a user asks something else, guide them back to PC-related topics." },
             { role: "user", content: user_message }
           ],
+          // the max letters in a reponse
           max_tokens: 150,
         })
       });
