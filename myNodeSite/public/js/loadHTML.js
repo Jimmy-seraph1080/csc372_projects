@@ -1,6 +1,6 @@
 // function to set the opacity of all images inside the product container
 function setAllImages() {
-    var images = document.querySelectorAll("#product img");
+    const images = document.querySelectorAll("#product img");
     images.forEach(img => img.style.opacity = "0.5");
 }
 
@@ -13,7 +13,7 @@ function loadHTML(filePath) {
             document.getElementById("content").innerHTML = xhr.responseText;
         }
         // handle the "back to rroducts" button if present
-        var backButton = document.getElementById("back-to-products");
+        const backButton = document.getElementById("back-to-products");
         if (backButton) {
             backButton.addEventListener("click", function () {
                 // reload the product selection page
@@ -26,17 +26,17 @@ function loadHTML(filePath) {
     xhr.send(null);
 }
 
-// event listener for loading html content when an image is clicked
+// event Listener for loading html content when an image is clicked
 document.addEventListener("DOMContentLoaded", function() {
-    var gpu4090 = document.getElementById("4090");
+    const gpu4090 = document.getElementById("4090");
 
     if (gpu4090) {
         gpu4090.addEventListener("click", function() {
             setAllImages();
-            // highlight selected image
+            // Highlight selected image
             this.style.opacity = "1";
-            // load GPU details
-            loadHTML("data/4090.html");
+            // Load GPU details
+            loadHTML("./data/4090.html");
         });
     }
 });

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <CPU>
+        <TITLE>Intel Core i9-13900K</TITLE>
+        <PRICE>Price: $589</PRICE>
+        <DESCRIPTION>Extreme performance CPU with 24 cores and hyper-threading.</DESCRIPTION>
+        <MORE>Perfect for gaming, content creation, and high-performance computing.</MORE>
+    </CPU>
+</products>
