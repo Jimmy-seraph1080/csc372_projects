@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // open ai KEY 
   // note to advice leaking the api key i will manually post upload the api.js to cpanel will this file up
   // on github  will have a faulty key
-  const API_KEY = "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";
+  const API_KEY = "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";
   // openAI API endpoint
   const API_URL = "https://api.openai.com/v1/chat/completions";
   // create a variable for greating and will take in false

@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
             //highlight selected image and change opacity of image to 1
             this.style.opacity = "1";
             // load RAM details from JSON
-            loadJSON("data/ram.json");
+            loadJSON("./data/ram.json");
         });
     }
 });

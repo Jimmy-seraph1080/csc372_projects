@@ -77,7 +77,7 @@ function loadXMLData() {
         container.innerHTML = `<p class="text-danger">network error. check console.</p>`;
     };
     // configure GET request for XML file
-    xhr.open("GET", "Data/i9.xml", true);
+    xhr.open("GET", "./data/i9.xml", true);
     // send request with null as parameter
     xhr.send(null);
 }
