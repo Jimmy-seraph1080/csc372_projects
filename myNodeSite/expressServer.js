@@ -3,7 +3,7 @@ var express = require('express');
 // this is how we'll access all of the functionality of the module
 var app = express();
 // port number
-var port = 1337;
+var port = 1338;
 
 // create path to public directory
 var dir = __dirname + '/public/';
@@ -40,5 +40,5 @@ app.use('/*', function(request, response){
 
 // start server
 app.listen(port, function(){
-    console.log("Listening... Go to http://localhost:" + port);
+    console.log("Listening... Go to http://localhost:" + port + " ctrl c to exit");
 });
