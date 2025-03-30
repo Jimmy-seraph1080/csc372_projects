@@ -98,66 +98,77 @@ var server = http.createServer(function (req, res) {
         case '/images/ssd.jpg':
             serveStaticFile(res, './public/images/ssd.jpg', 'image/jpg');
             break;
-        // 
+        // x.png
         case '/images/x.png':
             serveStaticFile(res, './public/images/x.png', 'image/png');
             break;
+        // 404top_w.jpg
         case '/images/404top_w.jpg':
             serveStaticFile(res, './public/images/404top_w.jpg', 'image/jpeg');
             break;
+        // 404bottom.gif
         case '/images/404bottom.gif':
             serveStaticFile(res, './public/images/404bottom.gif', 'image/gif');
             break;
+        // 404mid.gif
         case '/images/404mid.gif':
             serveStaticFile(res, './public/images/404mid.gif', 'image/gif');
             break;
+        // jquery
         case '/js/jquery-3.7.1.min.js':
             serveStaticFile(res, './public/js/jquery-3.7.1.min.js', 'text/javascript');
             break;
+        // loadxml.js
         case '/js/loadxml.js':
             serveStaticFile(res, './public/js/loadXML.js', 'text/javascript');
             break;
+        // loadhtml.js
         case '/js/loadhtml.js':
             serveStaticFile(res, './public/js/loadHTML.js', 'text/javascript');
             break;
+        // loadjson.js
         case '/js/loadjson.js':
             serveStaticFile(res, './public/js/loadJSON.js', 'text/javascript');
             break;
+        // loadjquery
         case '/js/loadjquery.js':
             serveStaticFile(res, './public/js/loadJQuery.js', 'text/javascript');
             break;
+        // loadnavbar
         case '/js/navbar.js':
             serveStaticFile(res, './public/js/navbar.js', 'text/javascript');
             break;
+        // loadjquery,js
         case '/js/jquery.js':
             serveStaticFile(res, './public/js/jquery.js', 'text/javascript');
             break;
+        // api.js
         case '/js/api.js':
             serveStaticFile(res, './public/js/api.js', 'text/javascript');
             break;
+        // i9.xml
         case '/data/i9.xml':
             serveStaticFile(res, './public/data/i9.xml', 'text/xml');
             break;
+        // ram.json
         case '/data/ram.json':
             serveStaticFile(res, './public/data/ram.json', 'application/json');
             break;
+        // 4090.html
         case '/data/4090.html':
             serveStaticFile(res, './public/data/4090.html', 'text/html');
             break;
-        case '/data/reviews.json':
-            serveStaticFile(res, './public/data/reviews.json', 'application/json');
-            break;
-        case '/data/specs.xml':
-            serveStaticFile(res, './public/data/specs.xml', 'text/xml');
-            break;
+        // ssd.html
         case '/data/ssd.html':
             serveStaticFile(res, './public/data/ssd.html', 'text/html');
             break;
+        // default case 404.html
         default:
             serveStaticFile(res, './public/404.html', 'text/html', 404);
             break;
     }
 });
-
+// start listening on specified port
 server.listen(port);
+// confirm server is running in console
 console.log("Listening... Go to http://localhost:" + port);
