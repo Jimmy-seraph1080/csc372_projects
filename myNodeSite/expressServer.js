@@ -16,7 +16,7 @@ app.use(express.static('public/images'));
 app.use(express.static('public/js'));
 app.use(express.static('public/data'));
 
-// get the respecyive route
+// get the respective route
 app.get('/', function(request, response) {
     response.sendFile(dir + 'index.html');
 });

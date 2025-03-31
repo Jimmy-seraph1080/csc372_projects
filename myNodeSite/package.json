@@ -1,11 +1,19 @@
 {
     "name": "csc372_projects",
     "version": "1.0.0",
-    "main": "expressServer.js",
+    "main": "handlebarsServer.js",
     "dependencies": {
-      "express": "^4.18.2"
+        "express": "^4.19.1",
+        "express-handlebars": "^8.0.1"
     },
     "scripts": {
-      "start": "node expressServer.js"
+        "start": "node expressServer.js"
+    },
+    "description": "Abdullah Logistic",
+    "author": "Jimmy Zhang",
+    "license": "ISC",
+    "engines": {
+        "node": ">=v16"
     }
-  }
+   
+}
