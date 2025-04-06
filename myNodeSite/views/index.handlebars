@@ -1,0 +1,49 @@
+<section id="intro" class="container mt-5 text-center">
+  <h1 class="title">{{header.title}}</h1>
+  <p class="phrase2">{{header.subtitle}}</p>
+  <p class="phrase2">{{header.cta}}</p>
+</section>
+
+<div class="content content-container text-center p-4 mt-4">
+  <p class="phrase">{{content.tagline}}</p>
+  <p><strong>{{content.companyName}}</strong> {{content.description}}</p>
+
+  <img src="/images/pc1.png" alt="PC part" class="img-fluid" />
+
+  <div id="imageSlider" class="carousel slide mt-4" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      {{#each carousel.slides}}
+      <button
+        type="button"
+        data-bs-target="#imageSlider"
+        data-bs-slide-to="{{@index}}"
+        class="{{#if @first}}active{{/if}}"
+        aria-label="Slide {{@index}}"
+      ></button>
+      {{/each}}
+    </div>
+
+    <div class="carousel-inner">
+      {{#each carousel.slides}}
+      <div class="carousel-item {{#if @first}}active{{/if}}">
+        <img src="/images/{{this.image}}" class="d-block w-100 slider_img" alt="{{this.alt}}" />
+      </div>
+      {{/each}}
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#imageSlider" data-bs-slide="prev" aria-label="Previous Slide">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#imageSlider" data-bs-slide="next" aria-label="Next Slide">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <h2 class="mt-4"><strong>{{contact.title}}</strong></h2>
+  <p>{{contact.authorsLabel}}: 
+    {{#each contact.authors}}
+      <strong>{{this}}</strong>{{#unless @last}}, {{/unless}}
+    {{/each}}
+  </p>
+  <p>{{contact.emailText}} <a href="mailto:{{contact.email}}">{{contact.email}}</a></p>
+</div>
