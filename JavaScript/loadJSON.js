@@ -15,12 +15,12 @@ function loadJSON(filePath) {
 // function to display JSON data in details section
 function displayProduct(product) {
     let output = `
-        <div class="border border-success p-3 bg-dark text-white">
-            <h5>${product.name}</h5>
-            <p><strong>Price:</strong> ${product.price}</p>
-            <p>${product.description}</p>
-            <button id="back-to-products" class="btn btn-success mt-3">Back to Products</button>
-        </div>
+        <div class="border-success p-4 bg-dark text-white rounded">
+        <h2>${getNodeValue(cpu, 'TITLE')}</h2>
+        <p><strong>${getNodeValue(cpu, 'PRICE')}</strong></p>
+        <p>${getNodeValue(cpu, 'DESCRIPTION')}</p>
+        <p>${getNodeValue(cpu, 'MORE')}</p>
+        <button id="back-to-products" class="btn btn-success mt-3">Back to Products</button>
     `;
 
     // insert the content into the "details" section

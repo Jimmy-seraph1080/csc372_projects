@@ -49,6 +49,7 @@ function loadXMLData() {
             // process the first <CPU> element
             var cpu = cpuElements[0];
             // create html detail and store it in output
+            
             var output = `
                 <div class="product-info bg-dark text-white p-4 rounded">
                     <h2>${getNodeValue(cpu, 'TITLE')}</h2>
