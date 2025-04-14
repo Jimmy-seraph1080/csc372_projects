@@ -26,5 +26,4 @@ function validate_number_range($num, $min, $max) {
 function validate_option($selected, $valid_options) {
     return in_array($selected, $valid_options);
 }
-?>
 

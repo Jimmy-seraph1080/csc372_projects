@@ -3,7 +3,6 @@
 session_start();
 // include the validate.php
 include 'validate.php';
-
 // initial form state
 $form_values = [
     'user_name' => '',
@@ -24,7 +23,6 @@ $form_errors = [
 $form_message = '';
 // define valid options for gender selection
 $valid_gender = ['Male', 'Female'];
-
 // check if the form was submitted via POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // collect and sanitize values
@@ -33,7 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $form_values['password'] = trim($_POST['password'] ?? '');
     $form_values['birth_year'] = $_POST['birth_year'] ?? '';
     $form_values['gender'] = $_POST['gender'] ?? '';
-
     // validate username length
     if (!validate_text_length($form_values['user_name'], 3, 20)) {
         $form_errors['user_name'] = "Username must be 3-20 characters.<br>";
@@ -54,7 +51,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!validate_option($form_values['gender'], $valid_gender)) {
         $form_errors['gender'] = "Please select a valid gender.<br>";
     }
-
     // final message
     // if there are no errors, store data and redirect to thank-you page
     if (implode('', $form_errors) === '') {
