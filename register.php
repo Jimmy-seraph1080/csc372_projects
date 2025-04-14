@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // store gender in session
         $_SESSION['gender'] = $form_values['gender'];
         // redirt with header to thank_you.php
-        header("Location: thank_you.php");
+        header("Location: https://jimmyzhang.rhody.dev/csc372_projects/thank_you.php");
         // exit 
         exit();
     } else {
