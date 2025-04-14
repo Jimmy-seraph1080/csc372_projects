@@ -90,6 +90,9 @@ $employee2 = new Employee("Jimmy Zhang", "Web Developer", "College student", "ji
                         <li class="nav-item">
                             <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">CONTACT US</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/register.php">SIGN UP</a>
+                        </li>                        
                     </ul>
                 </div>
 
