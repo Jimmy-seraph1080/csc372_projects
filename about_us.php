@@ -88,11 +88,11 @@ $employee2 = new Employee("Jimmy Zhang", "Web Developer", "College student", "ji
                             <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/about_us.php">ABOUT US</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">CONTACT US</a>
+                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/login.php">lOGIN</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/register.php">SIGN UP</a>
-                        </li>                        
+                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/logout.php">LOGOUT</a>
+                        </li>
                     </ul>
                 </div>
 
