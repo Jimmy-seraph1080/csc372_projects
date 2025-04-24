@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if ($user && password_verify($password, $user['password_hash'])) {
                 login($email);
-                header('Location: manage.php');
+                header('Location: index.html');
                 exit;
             } else {
                 $message = "Invalid email or password.";
@@ -131,7 +131,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
         <button type="submit" class="btn btn-success w-100 fw-semibold shadow-sm">Login</button>
       </form>
-      
+
       <form class="form <?= $active_tab === 'register' ? 'active' : '' ?>" method="POST">
           <div class="mb-3">
             <label for="username" class="form-label">Username</label>
