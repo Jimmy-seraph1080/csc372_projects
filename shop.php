@@ -1,3 +1,7 @@
+<?php
+// Include DB connection
+require 'includes/database-connection.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -21,7 +25,6 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav menu">
                         <li class="nav-item">
@@ -34,17 +37,16 @@
                             <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/shop.html">SHOP</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/about_us.php">ABOUT US</a>
+                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">ABOUT</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">CONTACT US</a>
+                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/login.php">lOGIN</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/register.php">SIGN UP</a>
-                        </li>                        
+                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/logout.php">LOGOUT</a>
+                        </li>
                     </ul>
                 </div>
-
             </div>
         </nav>
         <div class="header_line"></div>
@@ -59,7 +61,31 @@
             <p class="phrase">Click on a product to learn more!</p>
         </section>
 
-        <!-- Main Content Section -->
+        <section class="container text-center mt-4">
+            <div class="row justify-content-center">
+                <?php
+                $sql = "SELECT * FROM parts";
+                $stmt = $pdo->query($sql);
+                while ($part = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                    echo '
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark text-white border-success h-100">
+                            <div class="card-body">
+                                <img src="' . htmlspecialchars($part['image_url']) . '" class="img-fluid mb-2" alt="' . htmlspecialchars($part['name']) . '">
+                                <h5 class="card-title">' . htmlspecialchars($part['name']) . '</h5>
+                                <p class="card-text"><strong>Category:</strong> ' . htmlspecialchars($part['category']) . '</p>
+                                <p class="card-text"><strong>Brand:</strong> ' . htmlspecialchars($part['brand']) . '</p>
+                                <p class="card-text"><strong>Price:</strong> $' . number_format($part['price'], 2) . '</p>
+                                <p class="card-text">' . htmlspecialchars($part['description']) . '</p>
+                                <button class="btn btn-success w-100">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>';
+                }
+                ?>
+            </div>
+        </section>
+
         <section id="content" class="container text-center mt-4">
             <!-- Product Display -->
             <div id="product" class="row mt-4 justify-content-center">
