@@ -1,40 +1,51 @@
 <?php
+ini_set('display_errors',1);
+ini_set('display_startup_errors',1);
+error_reporting(E_ALL);
+
 require_once 'includes/session.php';
 require_once 'includes/database-connection.php';
 require_once 'validate.php';
-// determine which tab should be active (login or sign up)
+
+
 $active_tab = $_GET['tab'] ?? 'login';
-// message to hold errors or status updates
 $message = '';
-// form data storage
 $form_data = [];
-// check if form has been submitted
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // handle Login Form Submission
+    // Handle Login Form Submission
     if (isset($_POST['login_email'])) {
         $email = trim($_POST['login_email'] ?? '');
         $password = trim($_POST['login_password'] ?? '');
-        // validation
+
         if (empty($email) || empty($password)) {
             $message = "Please fill in all fields.";
             $active_tab = 'login';
-        } else {
-            $user = pdo($pdo, 
-                "SELECT * FROM users WHERE email = :email", 
-                ['email' => $email]
-            )->fetch();
-
-            if ($user && password_verify($password, $user['password_hash'])) {
-                login($email);
-                header('Location: index.html');
-                exit;
-            } else {
-                $message = "Invalid email or password.";
+          } else {
+            try {
+                // Attempt to fetch user by email
+                $user = pdo($pdo, 
+                    "SELECT * FROM users WHERE email = :email", 
+                    ['email' => $email]
+                )->fetch();
+        
+                // Verify password
+                if ($user && password_verify($password, $user['password_hash'])) {
+                    login($email); // Set session
+                    header('Location: https://jimmyzhang.rhody.dev/csc372_projects/index.html');
+                    exit;
+                } else {
+                    $message = "Invalid email or password.";
+                    $active_tab = 'login';
+                }
+        
+            } catch (PDOException $e) {
+                $message = "Login error: " . $e->getMessage();
                 $active_tab = 'login';
             }
         }
     }
-    // handle Signup Form Submission
+    // Handle Signup Form Submission
     elseif (isset($_POST['signup_email'])) {
         $form_data = [
             'email' => trim($_POST['signup_email'] ?? ''),
@@ -44,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'birth_year' => $_POST['birth_year'] ?? ''
         ];
 
-        // validation
+        // Validation
         $valid = true;
         if (!validate_email($form_data['email'])) {
             $message = "Invalid email format.";
@@ -62,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $message = "Invalid birth year (1900-" . date('Y') . ").";
             $valid = false;
         }
-        // if validation passed, proceed to register user
+
         if ($valid) {
             try {
                 $password_hash = password_hash($form_data['password'], PASSWORD_DEFAULT);
@@ -76,18 +87,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     'gender' => $form_data['gender'],
                     'birth_year' => $form_data['birth_year']
                 ]);
-                // redirect to thank-you page after successful signup
-                header("Location: thank_you.php");
+                
+                header("Location: https://jimmyzhang.rhody.dev/csc372_projects/thank_you.php");
                 exit;
             } catch (PDOException $e) {
-               // handle duplicate email
                 $message = ($e->errorInfo[1] == 1062) 
                     ? "Email already registered." 
                     : "Registration error: " . $e->getMessage();
                 $active_tab = 'register';
             }
         } else {
-            // Validation failed, stay on registration tab
             $active_tab = 'register';
         }
     }
@@ -120,6 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="alert alert-danger"><?= htmlspecialchars($message) ?></div>
       <?php endif; ?>
 
+      <!-- Login Form -->
       <form class="form <?= $active_tab === 'login' ? 'active' : '' ?>" method="POST">
         <div class="mb-3">
           <label for="login_email" class="form-label">Email</label>
@@ -132,6 +142,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit" class="btn btn-success w-100 fw-semibold shadow-sm">Login</button>
       </form>
 
+      <!-- Register Form -->
       <form class="form <?= $active_tab === 'register' ? 'active' : '' ?>" method="POST">
           <div class="mb-3">
             <label for="username" class="form-label">Username</label>
