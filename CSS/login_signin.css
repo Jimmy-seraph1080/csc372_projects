@@ -1,29 +1,26 @@
+/* Base reset and layout */
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
   background-color: #000;
   color: #fff;
-  overflow: hidden;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  width: 100%;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Arial', sans-serif;
+/* wrapper for left and right panels */
+.login-wrapper {
   display: flex;
   height: 100vh;
-  background-color: #000;
-  color: #fff;
 }
+
+/* left side decorative panel */
 .left-side {
   flex: 1;
-  background: url('Imagesl/ogin_left_img.png') center/cover;
-  background-size: cover;
   position: relative;
 }
+
 .left-side::after {
   content: '';
   position: absolute;
@@ -31,31 +28,31 @@ body {
   background: linear-gradient(45deg, rgba(0,255,0,0.1), rgba(0,0,0,0.7));
 }
 
+/* right-side form container */
 .right-side {
-  overflow-y: auto;
-  height: 100vh;
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #000;
-  padding: auto;
-  position: relative;
+  padding: 20px;
+  overflow-y: auto;
 }
 
-/* Logo styles */
+/*Logo styling*/
 .logo_container {
   max-width: 300px;
-  margin: auto ;
+  margin-bottom: 20px;
   filter: drop-shadow(0 0 15px #00ff00);
 }
+
 .logo_container img {
   width: 100%;
   height: auto;
 }
 
-/* Form wrapper - removed text-align:center */
+/* form wrapper with neon glow */
 .form-wrapper {
   width: 100%;
   max-width: 400px;
@@ -64,36 +61,22 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 25px #00ff00;
   padding: 20px;
-  animation: glow 2s infinite alternate; 
+  animation: glow 2s infinite alternate;
 }
 
-/* Left-aligned tabs */
+/* tabs for login/signup */
 .tabs {
   display: flex;
-  justify-content: flex-start; /* Changed from center */
-  margin-bottom: 2rem;
-  gap: 1rem;
-}
-
-/* Form element adjustments */
-.form-label {
-  display: block;
-  text-align: left;
-  margin-bottom: 0.5rem;
-}
-
-.form-control {
-  display: block;
-  width: 100%;
+  gap: 16px;
+  margin-bottom: 32px;
 }
 
 .tab {
-  padding: 10px 20px;
+  padding: 8px 16px;
   cursor: pointer;
   font-weight: bold;
   border-bottom: 2px solid transparent;
   color: #fff;
-  text-decoration: none;
   transition: all 0.3s ease;
 }
 .tab.active {
@@ -101,59 +84,94 @@ body {
   color: #00ff00;
   text-shadow: 0 0 10px #00ff00;
 }
-.tab:hover {
-  color: #00ff00;
-}
+
+/* form fields */
 .form {
   display: none;
 }
+
 .form.active {
   display: block;
 }
-input {
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #00ff00;
+  text-align: left;
+}
+
+input[type="email"],
+input[type="password"] {
   width: 100%;
-  padding: 10px;
-  margin: 0.75 0;
+  padding: 12px;
+  margin: 12px 0;
   background-color: #111;
   color: #fff;
   border: 1px solid #00ff00;
   border-radius: 6px;
-  transition: all 0.3s ease;
 }
+
 input:focus {
   outline: none;
   box-shadow: 0 0 15px #00ff00;
 }
+
+/* buttons stuff*/
 button {
   width: 100%;
-  padding: 10px;
-  margin-top: 0.75px;
+  padding: 12px;
+  margin-top: 12px;
   background-color: #00ff00;
-  color: #ffffff;
+  color: #000;
   border: none;
   border-radius: 999px;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 button:hover {
   transform: scale(1.05);
   box-shadow: 0 0 25px #00ff00;
 }
 
 button:disabled {
-  background-color: #111 !important;  /* slightly lighter than black */
-  color: #00ff00 !important;          /* neon green text */
+  background-color: #444;
+  color: #666;
   border: 1px solid #00ff00;
-  opacity: 1 !important;              /* prevent fade */
   cursor: not-allowed;
 }
 
+/* glow keyframes */
 @keyframes glow {
-  from {
-      box-shadow: 0 0 10px #00ff00;
+  from { 
+    box-shadow: 0 0 10px #00ff00; 
   }
-  to {
-      box-shadow: 0 0 25px #00ff00;
+  to { 
+    box-shadow: 0 0 25px #00ff00; 
+  }
+}
+
+/* responsive hiding the left panel isnt work and dont know how to go about this*/
+@media screen and (max-width: 1000px) {
+  /* full width form controls */
+  .form-wrapper, input[type="email"], input[type="password"], button {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .left-side {
+    display: none; 
+  }
+  
+  .right-side {
+    flex: 1; 
+    width: 180%; 
+  }
+  
+  .login-wrapper {
+    flex-direction: row;
   }
 }

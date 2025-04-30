@@ -45,8 +45,8 @@ class Employee {
     }
 }
 // instances of employee object
-$employee1 = new Employee("Abdullah Arwaly", "PC Build Specialist", "4+ years building", "abdallh99771@gmail.com", "Images/abdullah.png");
-$employee2 = new Employee("Jimmy Zhang", "Web Developer", "College student", "jimmy_zhang@uri.edu", "Images/jimmy.png");
+$employee1 = new Employee("Abdullah Arwaly", "PC Build Specialist", "4+ years building", "abdallh99771@gmail.com", "Images/abdullah.webp");
+$employee2 = new Employee("Jimmy Zhang", "Web Developer", "College student", "jimmy_zhang@uri.edu", "Images/jimmy.webp");
 ?>
 
 <!DOCTYPE html>
@@ -66,42 +66,42 @@ $employee2 = new Employee("Jimmy Zhang", "Web Developer", "College student", "ji
         <link rel="stylesheet" href="CSS/style.css">
         <link rel="stylesheet" href="CSS/chatbot.css">
     </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom-green w-100">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav menu">
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.php">HOME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/guide.html">PC BUILD</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/shop.php">SHOP</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/about_us.php">ABOUT US</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/login.php">lOGIN</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/logout.php">LOGOUT</a>
-                        </li>
-                    </ul>
+    <body class="bg-black text-white">
+        <header class="position-relative">
+            <nav class="navbar navbar-expand-lg navbar-dark position-absolute w-100 top-0 start-0">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav menu">
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/guide.html">PC BUILD</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/shop.php">SHOP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">ABOUT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/login.php">lOGIN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/logout.php">LOGOUT</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-
-            </div>
-        </nav>
+            </nav>
+        </header>
 
         <div class="header_line"></div>
         <div class = "container logo_container mt-4">
-            <img src = "Images/logo3.png" alt="Abdullah logistic logo" class = "img-fluid" >
+            <img src = "Images/logo3.webp" alt="Abdullah logistic logo" class = "img-fluid" >
         </div>
 
         <section class="container mt-5 text-center">

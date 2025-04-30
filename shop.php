@@ -1,5 +1,5 @@
 <?php
-// Include DB connection
+// include DB connection
 require 'includes/database-connection.php';
 ?>
 <!DOCTYPE html>
@@ -13,52 +13,58 @@ require 'includes/database-connection.php';
 
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
         <link rel="preload" href="CSS/style.css" as="style">
-        <link rel="preload" href="CSS/chatbot.css" as="style">
+        <link rel="preload" href="CSS/test.css" as="test">
+        <link rel="preload" href="CSS/chatbot.css" as="chat">
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/test.css">
         <link rel="stylesheet" href="CSS/chatbot.css">
     </head>
     <body class="bg-black text-white">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom-green w-100">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav menu">
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">HOME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/guide.html">PC BUILD</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/shop.php">SHOP</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">ABOUT</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/login.php">lOGIN</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/logout.php">LOGOUT</a>
-                        </li>
-                    </ul>
+        <header class="position-relative">
+            <nav class="navbar navbar-expand-lg navbar-dark position-absolute w-100 top-0 start-0">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav menu">
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/guide.html">PC BUILD</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/shop.php">SHOP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">ABOUT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/login.php">lOGIN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/logout.php">LOGOUT</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </header>
         <div class="header_line"></div>
         <div class = "container logo_container mt-4">
-            <img src = "Images/logo3.png" alt="Abdullah logistic logo" class = "img-fluid" >
+            <img src = "Images/logo3.webp" alt="Abdullah logistic logo" class = "img-fluid" >
         </div>
 
-        <!-- Introduction -->
-        <section id="intro" class="container mt-5 text-center">
-            <h1 class="title">Welcome to The PC Parts Store</h1>
-            <p class="phrase">Building a PC is an adventure, and we're here to help!</p>
-            <p class="phrase">Click on a product to learn more!</p>
+        <!-- introduction -->
+        <section id="intro" class="mt-5 text-center hero">
+            <div class="hero-inner">
+                <h1 class="title">Welcome to The PC Parts Store</h1>
+                <p class="phrase">Building a PC is an adventure, and we're here to help!</p>
+                <p class="phrase">Click on a product to learn more!</p>
+            </div>
         </section>
 
         <section class="container text-center mt-4">
@@ -77,7 +83,6 @@ require 'includes/database-connection.php';
                                 <p class="card-text"><strong>Brand:</strong> ' . htmlspecialchars($part['brand']) . '</p>
                                 <p class="card-text"><strong>Price:</strong> $' . number_format($part['price'], 2) . '</p>
                                 <p class="card-text">' . htmlspecialchars($part['description']) . '</p>
-                                <button class="btn btn-success w-100">Add to Cart</button>
                             </div>
                         </div>
                     </div>';
@@ -87,12 +92,12 @@ require 'includes/database-connection.php';
         </section>
 
         <section id="content" class="container text-center mt-4">
-            <!-- Product Display -->
+            <!-- product display -->
             <div id="product" class="row mt-4 justify-content-center">
                 <div class="col-md-4">
                     <div class="bg-dark card bg-dark text-white border-success fixed-height">
                         <div class="card-body">
-                            <img id="4090" src="Images/4090.png" class="img-fluid product" alt="NVIDIA RTX 4090">
+                            <img id="4090" src="Images/4090.webp" class="img-fluid product" alt="NVIDIA RTX 4090">
                             <h5 class="card-title">NVIDIA RTX 4090</h5>
                         </div>
                     </div>
@@ -100,7 +105,7 @@ require 'includes/database-connection.php';
                 <div class="col-md-4">
                     <div class="bg-dark card bg-dark text-white border-success fixed-height">
                         <div class="card-body">
-                            <img id="i9" src="Images/i9.jpg" class="img-fluid product" alt="Intel Core i9 13900K" >
+                            <img id="i9" src="Images/i9.webp" class="img-fluid product" alt="Intel Core i9 13900K" >
                             <h5 class="card-title">Intel Core i9 13900K</h5>
                         </div>
                     </div>
@@ -108,7 +113,7 @@ require 'includes/database-connection.php';
                 <div class="col-md-4">
                     <div class="bg-dark card bg-dark text-white border-success fixed-height">
                         <div class="card-body">
-                            <img id="ram" src="Images/ram.jpg" class="img-fluid product" alt="Corsair 32GB DDR5">
+                            <img id="ram" src="Images/ram.webp" class="img-fluid product" alt="Corsair 32GB DDR5">
                             <h5 class="card-title">Corsair 32GB DDR5</h5>
                         </div>
                     </div>
@@ -117,7 +122,7 @@ require 'includes/database-connection.php';
                 <div class="col-md-4 mt-4">
                     <div class="bg-dark card bg-dark text-white border-success fixed-height">
                         <div class="card-body">
-                            <img id="ssd" src="Images/ssd.jpg" class="img-fluid product" alt="Corsair 32GB DDR5">
+                            <img id="ssd" src="Images/ssd.webp" class="img-fluid product" alt="Corsair 32GB DDR5">
                             <h5 class="card-title">SAMSUNG 980 PRO SSD 2TB PCIe NVMe Gen 4</h5>
                         </div>
                     </div>
@@ -126,12 +131,12 @@ require 'includes/database-connection.php';
             </div>
         </section>
 
-        <!-- Chatbot Button -->
+        <!-- chatbot Button -->
         <button id="chatbot-icon" class="btn btn-dark text-white position-fixed">
             💬 Chat with us
         </button>
     
-        <!-- Chatbot Container -->
+        <!-- chatbot Container -->
         <div id="chatbot-container" class="position-fixed hidden">
             <div id="chatbot-header" class="d-flex justify-content-between align-items-center">
                 <span>Abdullah.AI</span>
@@ -146,6 +151,7 @@ require 'includes/database-connection.php';
                 <button id="send-btn" class="btn btn-neon">Send</button>
             </div>
         </div>
+        <br>
 
         <footer class="bg-dark text-white text-center py-3">
             <p>&copy; ABDULLAH's LOGISTIC. All rights reserved.</p>
