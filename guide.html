@@ -4,48 +4,62 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>PC Assembly Guide</title>
+        <link rel="preconnect" href="https://cdn.jsdelivr.net">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+
+        <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+        <link rel="preload" href="CSS/style.css" as="style">
+        <link rel="preload" href="CSS/test.css" as="test">
+        <link rel="preload" href="CSS/chatbot.css" as="style">
+        
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/test.css">
         <link rel="stylesheet" href="CSS/chatbot.css">
     </head>
+
     <body class="bg-black text-white">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom-green w-100">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav menu">
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.php">HOME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/guide.html">PC BUILD</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/shop.php">SHOP</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">ABOUT</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/login.php">lOGIN</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/logout.php">LOGOUT</a>
-                        </li>
-                    </ul>
+        <header class="position-relative">
+            <nav class="navbar navbar-expand-lg navbar-dark position-absolute w-100 top-0 start-0">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav menu">
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/guide.html">PC BUILD</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/shop.php">SHOP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.html">ABOUT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/login.php">lOGIN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/logout.php">LOGOUT</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </header>
         <div class="header_line"></div>
         <div class = "container logo_container mt-4">
-            <img src = "Images/logo3.png" alt="Abdullah logistic logo" class = "img-fluid" >
+            <img src = "Images/logo3.webp" alt="Abdullah logistic logo" class = "img-fluid" >
         </div>
 
-        <section id="intro" class="container mt-5 text-center">
-            <h1 class="title">How to Assemble a PC</h1>
-            <p class="phrase">Follow this step-by-step guide to build your own PC with confidence.</p>
+        <section id="intro" class="mt-5 text-center hero">
+            <div class="hero-inner">
+                <h1 class="title">How to Assemble a PC</h1>
+                <p class="phrase">Follow this step-by-step guide to build your own PC with confidence.</p>
+            </div>
         </section>
         
         <section id="steps" class="container content mt-4">
@@ -453,7 +467,7 @@
         </div>
         </section>
 
-        <!-- Chatbot Button -->
+        <!-- Here is the chatbot Button -->
         <button id="chatbot-icon" class="btn btn-dark text-white position-fixed">
             💬 Chat with us
         </button>
