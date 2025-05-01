@@ -54,38 +54,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="CSS/manage_form.css">
     <link rel="stylesheet" href="CSS/style.css">
 </head>
-    <body class="bg-black text-white">
-        <header class="position-relative">
-            <nav class="navbar navbar-expand-lg navbar-dark position-absolute w-100 top-0 start-0">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                        <ul class="navbar-nav menu">
-                            <li class="nav-item">
-                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.php">HOME</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/guide.html">PC BUILD</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/shop.php">SHOP</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/about_us.php">ABOUT</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/login.php">lOGIN</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/logout.php">LOGOUT</a>
-                            </li>
-                        </ul>
-                    </div>
+<body class="bg-black text-white">
+        <nav class="navbar navbar-expand-lg navbar-dark position-absolute w-100 top-0 start-0">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav menu">
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/index.php">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/guide.html">PC BUILD</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/shop.php">SHOP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/about_us.php">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/login.php">lOGIN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/logout.php">LOGOUT</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
     
     <div class="container my-5">
         <h1>MANAGE PC PARTS</h1>
