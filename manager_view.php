@@ -74,6 +74,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <li class="nav-item">
                             <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/about_us.php">ABOUT</a>
                         </li>
+                        <!-- ran out time for creating a redirect to manager :) but hope to pass go and collect 200? -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/manager_view.php">manager</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link text-white fw-bold px-lg-5" href="https://jimmyzhang.rhody.dev/csc372_projects/login.php">lOGIN</a>
                         </li>
