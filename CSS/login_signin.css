@@ -44,7 +44,7 @@ body {
   position: relative;
 }
 
-/* Logo styles */
+/* logo styles */
 .logo_container {
   max-width: 300px;
   margin: auto ;
@@ -55,7 +55,7 @@ body {
   height: auto;
 }
 
-/* Form wrapper - removed text-align:center */
+/* form wrapper*/
 .form-wrapper {
   width: 100%;
   max-width: 400px;
@@ -67,15 +67,15 @@ body {
   animation: glow 2s infinite alternate; 
 }
 
-/* Left-aligned tabs */
+/* left-aligned tabs */
 .tabs {
   display: flex;
-  justify-content: flex-start; /* Changed from center */
+  justify-content: flex-start;
   margin-bottom: 2rem;
   gap: 1rem;
 }
 
-/* Form element adjustments */
+/* form element adjustments */
 .form-label {
   display: block;
   text-align: left;
@@ -142,10 +142,10 @@ button:hover {
 }
 
 button:disabled {
-  background-color: #111 !important;  /* slightly lighter than black */
-  color: #00ff00 !important;          /* neon green text */
+  background-color: #111 !important;
+  color: #00ff00 !important; 
   border: 1px solid #00ff00;
-  opacity: 1 !important;              /* prevent fade */
+  opacity: 1 !important; 
   cursor: not-allowed;
 }
 
@@ -157,4 +157,3 @@ button:disabled {
       box-shadow: 0 0 25px #00ff00;
   }
 }
-
