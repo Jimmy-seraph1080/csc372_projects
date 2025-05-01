@@ -162,7 +162,7 @@ require 'includes/database-connection.php';
         <script src="JavaScript/loadHTML.js"></script>
         <script src="JavaScript/loadXML.js"></script>
         <script src="JavaScript/loadJSON.js"></script>
-        <script src="JavaScript/loadjQuery.js"></script>
+        <script src="JavaScript/loadJQuery.js"></script>
         <script src="JavaScript/api.js"></script> <!-- openai api js -->
     </body>
 </html>
