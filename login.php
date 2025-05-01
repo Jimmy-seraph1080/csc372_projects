@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($user && password_verify($password, $user['password_hash'])) {
           // then log the user in and redirect to the main page
           login($email); // Set session
-          header('Location: https://jimmyzhang.rhody.dev/csc372_projects/index.html');
+          header('Location: https://jimmyzhang.rhody.dev/csc372_projects/index.php');
           exit;
         }
         else {
